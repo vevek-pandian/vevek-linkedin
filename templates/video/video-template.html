@@ -1,0 +1,125 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:SG;font-weight:500;src:url(file:///home/claude/export/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-500-normal.woff2)}
+@font-face{font-family:SG;font-weight:600;src:url(file:///home/claude/export/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-600-normal.woff2)}
+@font-face{font-family:SG;font-weight:700;src:url(file:///home/claude/export/node_modules/@fontsource/space-grotesk/files/space-grotesk-latin-700-normal.woff2)}
+@font-face{font-family:IN;font-weight:400;src:url(file:///home/claude/export/node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2)}
+@font-face{font-family:IN;font-weight:500;src:url(file:///home/claude/export/node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:IN;font-weight:600;src:url(file:///home/claude/export/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+*{box-sizing:border-box;margin:0}
+html,body{width:1080px;height:1920px;overflow:hidden;background:#0D1117;font-family:IN,sans-serif;color:#F3F1EA}
+#bg{position:absolute;inset:0;background:#0D1117}
+#bgl{position:absolute;inset:0;background:#F4F2EC;opacity:0}
+.scene{position:absolute;left:96px;right:96px;top:300px;bottom:330px;display:flex;flex-direction:column;justify-content:center;gap:48px;opacity:0}
+.a{opacity:0;will-change:transform}
+.sg{font-family:SG}
+.kick{font-family:SG;font-weight:600;font-size:34px;letter-spacing:.14em;text-transform:uppercase;color:#5AA9FF;display:flex;align-items:center;gap:16px}
+h1{font-family:SG;font-weight:700;font-size:132px;line-height:1.0;letter-spacing:-.03em}
+h2{font-family:SG;font-weight:700;font-size:96px;line-height:1.04;letter-spacing:-.025em}
+.blue{color:#5AA9FF}
+.body{font-size:44px;line-height:1.4;color:#C9CED6}
+.big{font-family:SG;font-weight:700;font-size:330px;line-height:.9;letter-spacing:-.05em;color:#5AA9FF}
+.row{display:flex;flex-direction:column;gap:18px}
+.lab{display:flex;justify-content:space-between;font-family:SG;font-weight:600;font-size:40px}
+.track{height:84px;border-radius:20px;background:#161C25;border:2px solid #252D39;overflow:hidden}
+.fill{height:100%;border-radius:18px;width:0}
+.tile{display:flex;gap:30px;align-items:flex-start;padding:36px 38px;border-radius:26px;background:#161C25;border:2px solid #252D39}
+.tile .t{font-family:SG;font-weight:600;font-size:46px;line-height:1.2}
+#top{position:absolute;left:96px;right:96px;top:120px;display:flex;justify-content:space-between;align-items:center}
+#prog{position:absolute;left:96px;top:205px;height:6px;width:0;background:#5AA9FF;border-radius:3px}
+#progbg{position:absolute;left:96px;right:96px;top:205px;height:6px;background:#1F2630;border-radius:3px}
+#foot{position:absolute;left:96px;right:96px;bottom:110px;display:flex;justify-content:space-between;align-items:center;padding-top:36px;border-top:2px solid #252D39}
+#foot img{width:104px;height:104px;border-radius:52px;object-fit:cover;object-position:50% 22%;border:4px solid #5AA9FF}
+.me{display:flex;align-items:center;gap:24px}
+.me b{font-family:SG;font-weight:600;font-size:36px;display:block}
+.me span{font-size:27px;opacity:.75;white-space:nowrap}
+.src{font-size:24px;color:#9AA3AF;text-align:right;line-height:1.35}
+</style></head><body>
+<div id="bg"></div><div id="bgl"></div>
+<div id="top"><div class="kick" id="kick"><svg width="56" height="28" viewBox="0 0 44 22"><polyline points="2,18 10,4 18,16 26,6 34,14 42,3" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></svg><span>Jagged Intelligence</span></div><span id="tag" style="font-size:30px;color:#9AA3AF;font-weight:500">New study · Nov 2026</span></div>
+<div id="progbg"></div><div id="prog"></div>
+
+<!-- S1 hook -->
+<div class="scene" id="s1">
+  <div class="kick a" id="s1k">New study · 40,500 workers</div>
+  <h1 class="a" id="s1a" style="font-size:120px">Same AI tools.</h1>
+  <h1 class="a blue" id="s1b" style="font-size:112px">Brilliant in one team. Stuck in the next.</h1>
+  <p class="body a" id="s1c">That's jagged intelligence. And the jagged edge isn't always the model. Often, it's how people are brought in.</p>
+</div>
+
+<!-- S2 96 vs 29 -->
+<div class="scene" id="s2">
+  <p class="body a" id="s2a" style="color:#F3F1EA;font-family:SG;font-weight:600;font-size:56px;line-height:1.15">Workers willing to adapt to AI-driven change:</p>
+  <div class="a" id="s2b"><div class="big"><span id="n96">0</span>%</div><p class="body" style="margin-top:20px">when they help <b style="color:#F3F1EA">redesign their own work</b></p></div>
+  <div class="a" id="s2c"><div class="big" style="color:#4A5563;font-size:220px"><span id="n29">0</span>%</div><p class="body" style="margin-top:14px">when they don't</p></div>
+</div>
+
+<!-- S3 92 vs 15 -->
+<div class="scene" id="s3">
+  <h2 class="a" id="s3a">Explain how the role will change.</h2>
+  <p class="body a" id="s3b">Workers comfortable with AI change:</p>
+  <div class="row a" id="s3c"><div class="lab"><span>Leader explains it</span><span class="blue" id="n92">0%</span></div><div class="track"><div class="fill" id="f92" style="background:#5AA9FF"></div></div></div>
+  <div class="row a" id="s3d"><div class="lab"><span>Nobody explains</span><span id="n15" style="color:#9AA3AF">0%</span></div><div class="track"><div class="fill" id="f15" style="background:#4A5563"></div></div></div>
+</div>
+
+<!-- S4 training -->
+<div class="scene" id="s4">
+  <h2 class="a" id="s4a">Train people. <span class="blue">Then deploy.</span></h2>
+  <p class="body a" id="s4b">AI users who say AI made them more productive:</p>
+  <div class="row a" id="s4c"><div class="lab"><span>Trained</span><span class="blue" id="n93">0%</span></div><div class="track"><div class="fill" id="f93" style="background:#5AA9FF"></div></div></div>
+  <div class="row a" id="s4d"><div class="lab"><span>Untrained</span><span id="n47" style="color:#9AA3AF">0%</span></div><div class="track"><div class="fill" id="f47" style="background:#4A5563"></div></div></div>
+  <p class="body a" id="s4e" style="color:#F3F1EA">Yet training participation <b class="blue">fell from 77% to 67%</b> this year.</p>
+</div>
+
+<!-- S5 quote (light) -->
+<div class="scene" id="s5" style="color:#0D1117">
+  <p class="sg a" id="s5q" style="font-weight:700;font-size:260px;line-height:.5;height:130px;color:#1D5FBF">“</p>
+  <h2 class="a" id="s5a" style="font-size:104px">AI delivers its greatest impact when it happens <span style="color:#1D5FBF">with people</span> and not to people.</h2>
+  <p class="a" id="s5b" style="font-family:SG;font-weight:600;font-size:32px;letter-spacing:.1em;color:#5B6370">DENIS MACHUEL · CEO, THE ADECCO GROUP</p>
+</div>
+
+<!-- S6 CTA -->
+<div class="scene" id="s6">
+  <h2 class="a" id="s6a">3 ways to smooth the <span class="blue">jagged edge</span></h2>
+  <div class="tile a" id="s6b"><svg width="64" height="64" viewBox="0 0 52 52" style="flex-shrink:0"><circle cx="26" cy="26" r="26" fill="#16A34A"/><path d="M15 27l7 7 15-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">Involve people in redesigning the work</span></div>
+  <div class="tile a" id="s6c"><svg width="64" height="64" viewBox="0 0 52 52" style="flex-shrink:0"><circle cx="26" cy="26" r="26" fill="#16A34A"/><path d="M15 27l7 7 15-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">Explain how each role will change</span></div>
+  <div class="tile a" id="s6d"><svg width="64" height="64" viewBox="0 0 52 52" style="flex-shrink:0"><circle cx="26" cy="26" r="26" fill="#16A34A"/><path d="M15 27l7 7 15-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="t">Train before you deploy, not after</span></div>
+  <div class="a" id="s6e" style="display:flex;align-items:center;gap:16px;align-self:flex-start;padding:24px 40px;border-radius:999px;background:#5AA9FF;color:#0D1117;font-family:SG;font-weight:700;font-size:38px">Follow Vevek Pandian</div>
+</div>
+
+<div id="foot"><div class="me"><img src="file:///mnt/user-data/attachments/1c81a94b-1263-510b-990e-084ad7ebdd1b/7faf305f-image.jpg"><div><b id="nm">Vevek Pandian</b><span id="ttl">AI Engineering Leader · UAE</span></div></div><span class="src" id="src">Source: The Adecco Group,<br>Nov 2026</span></div>
+
+<script>
+const D=32;
+const S={s1:[0,4.6],s2:[4.6,10.4],s3:[10.4,15.6],s4:[15.6,21.4],s5:[21.4,26.4],s6:[26.4,32]};
+const ease=x=>1-Math.pow(1-Math.min(Math.max(x,0),1),3);
+const $=id=>document.getElementById(id);
+function enter(id,lt,start,dur=0.55,dy=40){const p=ease((lt-start)/dur);const e=$(id);e.style.opacity=p;e.style.transform=`translateY(${(1-p)*dy}px)`;}
+function count(id,lt,start,to,dur=1.0,suffix=''){const p=ease((lt-start)/dur);$(id).textContent=Math.round(to*p)+suffix;}
+function bar(id,lt,start,to,dur=1.0){$(id).style.width=(to*ease((lt-start)/dur))+'%';}
+function render(t){
+  $('prog').style.width=(888*Math.min(t/D,1))+'px';
+  let light=0;
+  for(const [k,[a,b]] of Object.entries(S)){
+    const sc=$(k);const lt=t-a;
+    let o=0; if(t>=a&&t<b){o=Math.min(1,lt/0.3,(b-t)/0.3); if(k==='s1')o=Math.min(1,(b-t)/0.3);}
+    sc.style.opacity=o; sc.style.display=o>0?'flex':'none';
+    if(k==='s5'&&o>0) light=o;
+    if(o<=0) continue;
+    if(k==='s1'){enter('s1k',lt,0.0);enter('s1a',lt,0.25);enter('s1b',lt,1.0);enter('s1c',lt,2.0);}
+    if(k==='s2'){enter('s2a',lt,0.1);enter('s2b',lt,0.6);count('n96',lt,0.6,96,1.1);enter('s2c',lt,2.3);count('n29',lt,2.3,29,0.9);}
+    if(k==='s3'){enter('s3a',lt,0.1);enter('s3b',lt,0.6);enter('s3c',lt,1.0);bar('f92',lt,1.2,92);count('n92',lt,1.2,92,1.0,'%');enter('s3d',lt,1.9);bar('f15',lt,2.1,15);count('n15',lt,2.1,15,1.0,'%');}
+    if(k==='s4'){enter('s4a',lt,0.1);enter('s4b',lt,0.6);enter('s4c',lt,1.0);bar('f93',lt,1.2,93);count('n93',lt,1.2,93,1.0,'%');enter('s4d',lt,1.8);bar('f47',lt,2.0,47);count('n47',lt,2.0,47,1.0,'%');enter('s4e',lt,3.1);}
+    if(k==='s5'){enter('s5q',lt,0.1);enter('s5a',lt,0.35);enter('s5b',lt,1.6);}
+    if(k==='s6'){enter('s6a',lt,0.1);enter('s6b',lt,0.7);enter('s6c',lt,1.3);enter('s6d',lt,1.9);enter('s6e',lt,2.8);}
+  }
+  $('bgl').style.opacity=light;
+  const dk=light<0.5;
+  $('foot').style.borderTopColor=dk?'#252D39':'#D9D5CA';
+  $('nm').style.color=dk?'#F3F1EA':'#0D1117';$('ttl').style.color=dk?'#F3F1EA':'#0D1117';
+  $('src').style.color=dk?'#9AA3AF':'#5B6370';$('tag').style.color=dk?'#9AA3AF':'#5B6370';
+  $('kick').style.color=dk?'#5AA9FF':'#1D5FBF';$('prog').style.background=dk?'#5AA9FF':'#1D5FBF';
+  $('progbg').style.background=dk?'#1F2630':'#E3DFD3';
+  document.querySelector('#foot img').style.borderColor=dk?'#5AA9FF':'#1D5FBF';
+}
+window.render=render;
+</script></body></html>
