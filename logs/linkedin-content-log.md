@@ -24,15 +24,15 @@ Check this before writing new posts. Do not repeat a topic key unless there is g
 | 18 | 2026-11-17 |  | Carousel (6 slides) | They replaced people with AI. Then asked them back. At higher pay. | AI rebounding | Jagged Intelligence | Delivered |
 | 19 | 2026-11-18 | 2026-11-19 | Carousel (6 slides) | Anthropic goes public today. The real story isn't the $1.4 trillion. | Anthropic IPO governance lessons | Engineering Leadership | Delivered |
 | 20 | 2026-11-19 | 2026-11-20 09:00 | Text + image | Your AI agent got hacked. Your bank says that's your problem. | Banks shift AI agent losses to customers | AI-Native Engineering Orgs | Scheduled in Buffer |
-| 21 | 2026-11-19 | 2026-11-23 08:45 | Text + image | "Greater AI autonomy requires greater transparency." | Microsoft AI Transparency Initiative | AI-Native Engineering Orgs | Scheduled in Buffer |
-| 22 | 2026-11-19 | 2026-11-24 15:30 | Text + image | $4.5 billion. For a company that helps businesses run their own AI models. | Palo Alto buys Applied Compute | AI-Native Engineering Orgs | Scheduled in Buffer |
-| 23 | 2026-11-19 | 2026-11-25 16:00 | Text + image | The new model is smarter. It's also twice as likely to hide that it failed. | GPT-6.2 Astra hides coding failures | Jagged Intelligence | Scheduled in Buffer |
-| 24 | 2026-11-19 | 2026-11-26 16:30 | Text + image | 4 AI stories. 1 lesson every engineering leader needs. | Week wrap: AI accountability | Engineering Leadership | Scheduled in Buffer |
-| 25 | 2026-11-19 | 2026-11-27 09:00 | Video (32s, vertical) + caption | Same AI tools. Brilliant in one team. Stuck in the next. | Adecco Global Workforce study: people-led AI adoption | Engineering Leadership | Scheduled in Buffer |
-| 26 | 2026-11-19 | 2026-11-30 08:45 | Video (31s, vertical) + caption | AI tools change every few months. The stack doesn't. | Students: learn the AI engineering stack, not tools | Career & lessons | Scheduled in Buffer |
-| 27 | 2026-11-19 | 2026-12-01 15:30 | Video (29s, vertical) + caption | In tutorials, AI works first time. In production, it fails quietly. | Students: production lessons tutorials skip | Career & lessons | Scheduled in Buffer |
-| 28 | 2026-11-19 | 2026-12-03 16:30 | Video (31s, vertical) + caption | Most AI portfolios look the same. Here's how to stand out. | Students: AI portfolio projects that get remembered | Career & lessons | Scheduled in Buffer |
-| 29 | 2026-11-19 | 2026-12-04 09:00 | Video (32s, vertical) + caption | Your LLM demo is 1 box. Production is 7. | Students: architecture of a production LLM app | Design & architecture | Scheduled in Buffer |
+| 21 | 2026-11-19 | 2026-11-21 11:42 | Text + image | "Greater AI autonomy requires greater transparency." | Microsoft AI Transparency Initiative | AI-Native Engineering Orgs | Scheduled in Buffer |
+| 22 | 2026-11-19 | 2026-11-22 10:22 | Text + image | $4.5 billion. For a company that helps businesses run their own AI models. | Palo Alto buys Applied Compute | AI-Native Engineering Orgs | Scheduled in Buffer |
+| 23 | 2026-11-19 | 2026-11-23 08:45 | Text + image | The new model is smarter. It's also twice as likely to hide that it failed. | GPT-6.2 Astra hides coding failures | Jagged Intelligence | Scheduled in Buffer |
+| 24 | 2026-11-19 | 2026-11-24 15:30 | Text + image | 4 AI stories. 1 lesson every engineering leader needs. | Week wrap: AI accountability | Engineering Leadership | Scheduled in Buffer |
+| 25 | 2026-11-19 | 2026-11-25 16:00 | Video (32s, vertical) + caption | Same AI tools. Brilliant in one team. Stuck in the next. | Adecco Global Workforce study: people-led AI adoption | Engineering Leadership | Scheduled in Buffer |
+| 26 | 2026-11-19 | 2026-11-26 16:30 | Video (31s, vertical) + caption | AI tools change every few months. The stack doesn't. | Students: learn the AI engineering stack, not tools | Career & lessons | Scheduled in Buffer |
+| 27 | 2026-11-19 | 2026-11-27 09:00 | Video (29s, vertical) + caption | In tutorials, AI works first time. In production, it fails quietly. | Students: production lessons tutorials skip | Career & lessons | Scheduled in Buffer |
+| 28 | 2026-11-19 | 2026-11-28 11:42 | Video (31s, vertical) + caption | Most AI portfolios look the same. Here's how to stand out. | Students: AI portfolio projects that get remembered | Career & lessons | Scheduled in Buffer |
+| 29 | 2026-11-19 | 2026-11-29 10:22 | Video (32s, vertical) + caption | Your LLM demo is 1 box. Production is 7. | Students: architecture of a production LLM app | Design & architecture | Scheduled in Buffer |
 
 ## Ideas backlog (researched, not yet used; re-verify before use)
 
