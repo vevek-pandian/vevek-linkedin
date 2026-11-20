@@ -73,6 +73,6 @@ Python needs `playwright` (preinstalled with Chromium), `numpy`, `pypdf`, `openp
 11. **Keep the schedule going.**
     - Use list_triggers to check for upcoming runs of "Jagged Intelligence 9-day content run".
     - If fewer than 2 future runs exist, create the next one-shot runs at 11:23 Asia/Dubai, 9 days apart after the latest one. Use the same prompt.
-12. **Report** with SendUserMessage: what was queued (date, format, hook), sources, the next run date, and anything that needs Vevek (for example, Buffer full or a holiday skipped).
+12. **Report** with SendUserMessage: what was queued (date, format, hook), sources, the next run date, and anything that needs Vevek (for example, Buffer full).
 
 If something blocks the run (Buffer or GitHub unreachable, the queue already full), don't guess. Do the research and drafts, save them under `drafts/<date>/` in the repo, push, and report what's waiting.
