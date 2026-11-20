@@ -20,7 +20,7 @@ Python needs `playwright` (preinstalled with Chromium), `numpy`, `pypdf`, `openp
 - **Person:** Vevek Pandian, AI Engineering Leader, UAE.
 - **Brand:** "Jagged Intelligence": where AI is brilliant and where it quietly stumbles.
 - **Buffer:** organisation "My Organization" `5b505238cd0a06925135162d`, LinkedIn channel `6aff2c55ece6dfde5f21aa24`, timezone Asia/Dubai (+04:00).
-- **Posting slots (UAE time):** Mon 08:45, Tue 15:30, Wed 16:00, Thu 16:30, Fri 09:00. No weekends.
+- **Posting slots (UAE time), 7 days a week:** Mon 08:45, Tue 15:30, Wed 16:00, Thu 16:30, Fri 09:00, Sat 11:42, Sun 10:22. Always re-read the live slots with Buffer `get_channel` in case they changed.
 - **UAE public holidays:** skip 2–3 Dec (National Day) and 1 Jan, and check for any others in the window.
 - **Free plan limit:** Buffer's free plan holds at most 10 scheduled posts at once. Count the scheduled posts first and never go over 10.
 - **Public media hosting:** this repo. Use the commit-SHA raw URL `https://raw.githubusercontent.com/vevek-pandian/vevek-linkedin/<SHA>/<path>`, not `/main/`, because `/main/` can lag. Check each URL returns 200 before giving it to Buffer.
@@ -33,7 +33,7 @@ Python needs `playwright` (preinstalled with Chromium), `numpy`, `pypdf`, `openp
 3. **Find the window.**
    - Use Buffer `list_posts` (status scheduled, sorted by dueAt) to find the latest scheduled post.
    - The window is the 9 days starting the day after that post. If nothing is scheduled, the window starts tomorrow.
-   - Fill every weekday slot in the window that isn't a UAE holiday. That is usually 5–7 posts, capped so the total in Buffer stays at 10 or fewer.
+   - Fill every slot in the window (one post per day) that isn't a UAE holiday. That is usually 9 posts, capped so the total in Buffer stays at 10 or fewer. Runs are timed for the last day of the current queue, so normally 0–1 posts are still waiting.
 4. **Research.**
    - Use web search to find the hottest AI news of the **last 9 days**. Look at model launches, big company moves, studies and surveys with real numbers, failures and incidents, regulation, and UAE/GCC AI news.
    - Confirm every fact and number from a primary or reputable source.
@@ -41,8 +41,9 @@ Python needs `playwright` (preinstalled with Chromium), `numpy`, `pypdf`, `openp
    - No photos of real people and no company logos.
 5. **Plan the mix** across the window:
    - About half are **text + image card** posts.
-   - One **carousel** (6 slides, PDF), on the Wednesday slot if there is one.
-   - One or two **short videos** (25–35 s, vertical), on a Friday slot if possible.
+   - One or two **carousels** (6 slides, PDF), on Wednesday if possible.
+   - Two **short videos** (25–35 s, vertical), one of them on Friday if possible.
+   - Weekend slots (Sat/Sun) suit lighter pieces: student lessons, a key-line card or a weekly recap.
    - At least one piece in each run is for **students / early-career**: lessons from AI engineering leadership on tools, best practices, design and architecture.
    - Alternate dark and light visuals.
 6. **Write the posts** in the house style:
