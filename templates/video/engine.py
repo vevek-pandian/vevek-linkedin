@@ -1,3 +1,6 @@
+import os
+REPO = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+TK = os.path.join(REPO, "toolkit")
 """Jagged Intelligence video engine: spec -> HTML -> scene MP4s -> soundtrack -> final MP4.
 Usage: python3 engine.py <spec_module> [stills|full]"""
 import asyncio, importlib, os, re, subprocess, sys, wave
@@ -5,8 +8,8 @@ import numpy as np
 from playwright.async_api import async_playwright
 
 FPS = 30
-FONTS = "/home/claude/export/node_modules/@fontsource"
-PHOTO = "/mnt/user-data/attachments/1c81a94b-1263-510b-990e-084ad7ebdd1b/7faf305f-image.jpg"
+FONTS = os.path.join(TK, "assets", "fonts")
+PHOTO = os.path.join(TK, "assets", "photo.jpg")
 ZIG = '<svg width="56" height="28" viewBox="0 0 44 22"><polyline points="2,18 10,4 18,16 26,6 34,14 42,3" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/></svg>'
 TICK = '<svg width="60" height="60" viewBox="0 0 52 52" style="flex-shrink:0"><circle cx="26" cy="26" r="26" fill="#16A34A"/><path d="M15 27l7 7 15-16" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg>'
 
@@ -78,8 +81,8 @@ function render(t){
 
 def fonts():
     s = ""
-    for w in (500, 600, 700): s += f"@font-face{{font-family:SG;font-weight:{w};src:url(file://{FONTS}/space-grotesk/files/space-grotesk-latin-{w}-normal.woff2)}}"
-    for w in (400, 500, 600): s += f"@font-face{{font-family:IN;font-weight:{w};src:url(file://{FONTS}/inter/files/inter-latin-{w}-normal.woff2)}}"
+    for w in (500, 600, 700): s += f"@font-face{{font-family:SG;font-weight:{w};src:url(file://{FONTS}/space-grotesk-latin-{w}-normal.woff2)}}"
+    for w in (400, 500, 600): s += f"@font-face{{font-family:IN;font-weight:{w};src:url(file://{FONTS}/inter-latin-{w}-normal.woff2)}}"
     return s
 
 def build_html(spec):
@@ -177,7 +180,7 @@ def music(style, wh, tk, D, path, seed=1):
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes((out*32767).astype(np.int16).tobytes())
 
 async def render(spec, mode):
-    work = f"/home/claude/video/{spec.NAME}"; os.makedirs(work, exist_ok=True)
+    work = os.path.join(REPO, "build", spec.NAME); os.makedirs(work, exist_ok=True)
     html, D = build_html(spec)
     open(f"{work}/video.html", "w").write(html)
     async with async_playwright() as p:
@@ -208,11 +211,11 @@ async def render(spec, mode):
     music(spec.MUSIC, wh, tk, D, f"{work}/soundtrack.wav", seed=spec.SEED)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", f"{work}/list.txt", "-c", "copy", f"{work}/joined.mp4"], check=True)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", f"{work}/joined.mp4", "-i", f"{work}/soundtrack.wav", "-map", "0:v", "-map", "1:a",
-                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", f"/home/claude/video/{spec.NAME}.mp4"], check=True)
+                    "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", os.path.join(REPO, "videos", spec.NAME + ".mp4")], check=True)
     return D
 
 if __name__ == "__main__":
-    sys.path.insert(0, "/home/claude/video/specs")
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "specs"))
     spec = importlib.import_module(sys.argv[1])
     D = asyncio.run(render(spec, sys.argv[2] if len(sys.argv) > 2 else "full"))
     print("duration", round(D, 2))
